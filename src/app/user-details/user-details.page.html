@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalles</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="character">
+    <ion-card>
+      <ion-img [src]="character.image" alt="Foto de {{character.name}}"></ion-img>
+      <ion-card-header>
+        <ion-card-title>{{character.name}}</ion-card-title>
+        <ion-card-subtitle>{{character.status}}</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content>
+        Sexo: {{character.gender}} Localización: {{character.location.name}}
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
